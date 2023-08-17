@@ -61,7 +61,7 @@ I've not done enough research to understand if these can be applied to non JS la
 
 The final concept we cover is "Anti patterns" or the opposite of a "good one". The author describes them as: 
 
->> An anti-pattern is just like a pattern, except that instead of a solution it gives some thing that looks superficially like a solution but is not one. 
+> An anti-pattern is just like a pattern, except that instead of a solution it gives some thing that looks superficially like a solution but is not one. 
 
 Some of the common ones to keep in mind while writing JS are: 
 

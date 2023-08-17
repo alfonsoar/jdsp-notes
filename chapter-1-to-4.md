@@ -22,9 +22,9 @@ More specifically he discusses:
 
 3. **Rule of Three**: In addition to the "Pattern"-ity test, a proto-pattern must also pass this rule to be considered a pattern. It states that in order for pattern to be valid it mus be measured against the following rules:   
 
-   3.1 - Fitness of purpose: How is the pattern considered successful?    
-   3.2 - Usefulness: Why is the pattern considered successful?    
-   3.3 - Applicability: Does it have broader applicability? if yes why?
+   3.1 - **Fitness of purpose**: How is the pattern considered successful?    
+   3.2 - **Usefulness**: Why is the pattern considered successful?    
+   3.3 - **Applicability**: Does it have broader applicability? if yes why?
   
 The book then provides a template to structure and write a design pattern. This section of the book focuses on "Good" design patterns while the following chapter discusses "anti-patterns". Let's explore the structure of the former first. 
 
@@ -57,3 +57,16 @@ Both of these examples focus on the Singleton design pattern. An interesting sid
 
 3. **Behavioral Design Patterns**: These patterns define how objects interact and communicate with each other, focusing on the collaboration between objects.
 
+I've not done enough research to understand if these can be applied to non JS languages but in principle they should. 
+
+The final concept we cover is "Anti patterns" or the opposite of a "good one". The author describes them as: 
+
+>> An anti-pattern is just like a pattern, except that instead of a solution it gives some thing that looks superficially like a solution but is not one. 
+
+Some of the common ones to keep in mind while writing JS are: 
+
+1. Polluting global namespace (i.e `window.`)
+2. Passing strings rather than functions to `setTimeout` and `setInterval`. [More details](https://stackoverflow.com/questions/6081560/is-there-ever-a-good-reason-to-pass-a-string-to-settimeout)
+3. Modifying the `Object` prototype
+4. Using JS in an inline form. (less flexible, hard to read, can't be cached)
+5. Using `document.write`, since depending on when you call it can overwrite the whole page. I tweaked the Authors example to demonstrate this [here](https://jsfiddle.net/alfonsoar/q9ahpe5b/1/). 
